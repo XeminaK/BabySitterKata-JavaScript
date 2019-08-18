@@ -1,4 +1,4 @@
 "use strict";
-function startJob() {
-    
+function startJob(startTime) {
+    return 1;
 };
