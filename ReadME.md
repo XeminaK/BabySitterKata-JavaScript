@@ -1,5 +1,7 @@
 Hello! Welcome to my solution to the Babysitter Kata Coding Challenge!
 
+Please note: In order to solve this solution, I used military time.  Therefore 8pm = 20:00 and 12am = 24:00.  Please take that into consideration as you look through my code.
+
 For this solution, I have created test cases along with my code.  In order to run the test cases there are a few instructions you need to follow.
 
 1. Download (or clone) my repository.
