@@ -1,4 +1,5 @@
-describe("Tests for BabySitter Kata", function() {
+describe("Tests for startJob function", function() {
+
     it("Testing to see if 'startJob' function is defined", function() {
         expect(startJob).toBeDefined();
     });
@@ -22,10 +23,17 @@ describe("Tests for BabySitter Kata", function() {
     })
 
     //To have the code not break after midnight, I chose to add +24 to the numbers that start after midnight
-    it("Testing to see startJob will take a time in range (after midnight) and return an appropriate number", function() {
+    it("Testing to see startJob will take a time in range (after midnight) and return the appropriate number (startTime +24)", function() {
         expect(startJob(3)).toBe(27);
         expect(startJob(2)).toBe(26);
     });
 
+}); //end test case for startJob function
 
-}); //end test case
+describe("Tests for endJob function", function() {
+    
+    it("Testing to see if 'endJob' function is defined", function() {
+        expect(endJob).toBeDefined();
+    });
+
+}); //end test case for endJob function
