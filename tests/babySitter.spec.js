@@ -66,4 +66,8 @@ describe("Tests for startCheckInteger function", function() {
     it("Testing to see if 'startCheckInteger' is defined", function() {
         expect(startCheckInteger).toBeDefined();
     });
+
+    it("Testing to see if a 1 passes through, startCheckInteger function will return a 1", function() {
+        expect(startCheckInteger(1)).toBe(1);
+    });
 });
