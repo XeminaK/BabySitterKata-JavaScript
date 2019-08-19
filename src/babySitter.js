@@ -35,6 +35,6 @@ function startCheckInteger(startTime) {
     };
 };
 
-function endCheckInteger() {
-
+function endCheckInteger(endTime) {
+    return endTime;
 };

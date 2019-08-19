@@ -87,4 +87,9 @@ describe("Tests for endCheckInteger function", function() {
     it("Testing to see if endCheckInteger function is defined", function() {
         expect(endCheckInteger).toBeDefined();
     });
+
+    it("Testing to see if an integer passes through, endCheckInteger function will return that integer", function() {
+        expect(endCheckInteger(1)).toBe(1);
+        expect(endCheckInteger(2)).toBe(2);
+    })
 });
