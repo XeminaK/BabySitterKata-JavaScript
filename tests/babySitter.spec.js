@@ -96,5 +96,9 @@ describe("Tests for endCheckInteger function", function() {
     it("Testing for a non-integer to be returned as an integer that is rounded up", function() {
         expect(endCheckInteger(17.5)).toBe(18);
         expect(endCheckInteger(13.3)).toBe(14);
-    })
+    });
+});
+
+describe("Tests for familyA function", function() {
+
 });
