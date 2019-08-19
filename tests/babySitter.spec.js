@@ -84,4 +84,7 @@ describe("Tests for startCheckInteger function", function() {
 
 describe("Tests for endCheckInteger function", function() {
 
+    it("Testing to see if endCheckInteger function is defined", function() {
+        expect(endCheckInteger).toBeDefined();
+    });
 });

@@ -34,3 +34,7 @@ function startCheckInteger(startTime) {
     return startTime;
     };
 };
+
+function endCheckInteger() {
+
+};
