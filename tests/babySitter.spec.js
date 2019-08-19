@@ -54,5 +54,10 @@ describe("Tests for endJob function", function() {
         expect(endJob(10)).toBe(28);
         //expect(endJob(10)).toBe("The hours are out of range") -> if message is required
     });
+    //To have the code not break after midnight, I chose to add +24 to the numbers that start after midnight
+    it("Testing to see endJob will take a time in range (after midnight) and return the appropriate number (endTime + 24)", function() {
+        expect(endJob(1)).toBe(25);
+        expect(endJob(2)).toBe(26);
+    })
 
 }); //end test case for endJob function
