@@ -74,7 +74,7 @@ describe("Tests for startCheckInteger function", function() {
     it("Testing to see if a 2 is passed through, startCheckInteger function will return a 2", function() {
         expect(startCheckInteger(2)).toBe(2);
     });
-    
+    //If a user enters 5:30, it should return 5pm to keep it a non-fractional number
     it("Testing for a non-integer to be returned as an integer that is rounded down", function() {
         expect(startCheckInteger(17.5)).toBe(17);
         expect(startCheckInteger(13.7)).toBe(13);
@@ -92,7 +92,7 @@ describe("Tests for endCheckInteger function", function() {
         expect(endCheckInteger(1)).toBe(1);
         expect(endCheckInteger(2)).toBe(2);
     });
-
+    //If a user enters 5:30, it should return 6pm to keep it a non-fractional number
     it("Testing for a non-integer to be returned as an integer that is rounded up", function() {
         expect(endCheckInteger(17.5)).toBe(18);
         expect(endCheckInteger(13.3)).toBe(14);
