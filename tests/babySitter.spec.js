@@ -43,5 +43,10 @@ describe("Tests for endJob function", function() {
     it("Testing endJob to return 20 if 20 is passed through", function() {
         expect(endJob(20)).toBe(20);
     });
+    
+    it("Testing endJob to accept the endTime that is in range (before midnight)", function() {
+        expect(endJob(17)).toBe(17);
+        expect(endJob(21)).toBe(21);
+    });
 
 }); //end test case for endJob function

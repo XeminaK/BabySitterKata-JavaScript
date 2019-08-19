@@ -12,5 +12,9 @@ function startJob(startTime) {
 };
 
 function endJob(endTime) {
+    //endTime between 6pm and midnight (cannot be 5pm since that is the earliest start time)
+    if (endTime >=18 && endTime <=24){
+        return endTime;
+    }
     return endTime;
 };
