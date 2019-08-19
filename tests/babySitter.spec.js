@@ -40,4 +40,8 @@ describe("Tests for endJob function", function() {
         expect(endJob(18)).toBe(18);
     });
 
+    it("Testing endJob to return 20 if 20 is passed through", function() {
+        expect(endJob(20)).toBe(20);
+    });
+
 }); //end test case for endJob function
