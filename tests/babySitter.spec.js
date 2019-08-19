@@ -91,5 +91,10 @@ describe("Tests for endCheckInteger function", function() {
     it("Testing to see if an integer passes through, endCheckInteger function will return that integer", function() {
         expect(endCheckInteger(1)).toBe(1);
         expect(endCheckInteger(2)).toBe(2);
+    });
+
+    it("Testing for a non-integer to be returned as an integer that is rounded up", function() {
+        expect(endCheckInteger(17.5)).toBe(18);
+        expect(endCheckInteger(13.3)).toBe(14);
     })
 });

@@ -36,5 +36,10 @@ function startCheckInteger(startTime) {
 };
 
 function endCheckInteger(endTime) {
-    return endTime;
+    if (Number.isInteger(endTime)) {
+        return endTime;
+    } else {
+      endTime = Math.ceil(endTime);
+      return endTime;  
+    };
 };
