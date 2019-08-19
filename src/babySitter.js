@@ -44,6 +44,10 @@ function endCheckInteger(endTime) {
     };
 };
 
-function familyA() {
-    
+// function familyA(startTime, endTime) {
+//     let hours = endTime - startTime;
+// };
+
+function familyA(startTime, endTime) {
+    return endTime - startTime;
 };

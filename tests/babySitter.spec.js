@@ -101,7 +101,14 @@ describe("Tests for endCheckInteger function", function() {
 
 describe("Tests for familyA function", function() {
 
-    it("testing to see if familyA function is defined", function() {
+    it("Testing to see if familyA function is defined", function() {
         expect(familyA).toBeDefined();
+    });
+
+    it("Testing to see if familyA will pass startTime and endTime and return hours worked", function() {
+        expect(familyA(17, 24)).toBe(7);
+       // familyA(17, 24);
+       // let hours = 7;
+        //expect(hours).toBe(7);
     });
 });
