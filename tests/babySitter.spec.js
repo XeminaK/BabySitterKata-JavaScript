@@ -75,4 +75,9 @@ describe("Tests for startCheckInteger function", function() {
         expect(startCheckInteger(2)).toBe(2);
     });
     
+    it("Testing for an non-integer to be returned as an integer that is rounded down", function() {
+        expect(startCheckInteger(17.5)).toBe(17);
+        expect(startCheckInteger(13.7)).toBe(13);
+    });
+
 });

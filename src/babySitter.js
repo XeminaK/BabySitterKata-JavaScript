@@ -27,5 +27,10 @@ function endJob(endTime) {
 };
 
 function startCheckInteger(startTime) {
+    if (Number.isInteger(startTime)) {
+        return startTime;
+    } else {
+    startTime = Math.floor(startTime);
     return startTime;
+    };
 };
