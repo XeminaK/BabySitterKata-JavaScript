@@ -52,6 +52,7 @@ describe("Tests for endJob function", function() {
     //Entering 10am will return default end time -> 4am (24 + 4 = 28)
     it("Testing to see if endJob will take a time that is not in range and return a time in range", function() {
         expect(endJob(10)).toBe(28);
+        //expect(endJob(10)).toBe("The hours are out of range") -> if message is required
     });
 
 }); //end test case for endJob function
