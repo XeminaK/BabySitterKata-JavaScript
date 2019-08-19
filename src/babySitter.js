@@ -25,3 +25,7 @@ function endJob(endTime) {
     //return "The hours are out of range" -> if message is required
     }
 };
+
+function startCheckInteger() {
+    
+};

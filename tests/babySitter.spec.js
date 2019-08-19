@@ -61,3 +61,9 @@ describe("Tests for endJob function", function() {
     });
 
 }); //end test case for endJob function
+
+describe("Tests for startCheckInteger function", function() {
+    it("Testing to see if 'startCheckInteger' is defined", function() {
+        expect(startCheckInteger).toBeDefined();
+    });
+});
