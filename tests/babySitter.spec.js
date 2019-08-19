@@ -70,4 +70,8 @@ describe("Tests for startCheckInteger function", function() {
     it("Testing to see if a 1 passes through, startCheckInteger function will return a 1", function() {
         expect(startCheckInteger(1)).toBe(1);
     });
+
+    it("Testing to see if a 2 is passed through, startCheckInteger function will return a 2", function() {
+        expect(startCheckInteger(2)).toBe(2);
+    });
 });

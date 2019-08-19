@@ -27,5 +27,5 @@ function endJob(endTime) {
 };
 
 function startCheckInteger(startTime) {
-    return 1;
+    return startTime;
 };
