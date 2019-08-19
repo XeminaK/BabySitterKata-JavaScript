@@ -58,6 +58,6 @@ describe("Tests for endJob function", function() {
     it("Testing to see endJob will take a time in range (after midnight) and return the appropriate number (endTime + 24)", function() {
         expect(endJob(1)).toBe(25);
         expect(endJob(2)).toBe(26);
-    })
+    });
 
 }); //end test case for endJob function
