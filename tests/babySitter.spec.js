@@ -36,4 +36,8 @@ describe("Tests for endJob function", function() {
         expect(endJob).toBeDefined();
     });
 
+    it("Testing endJob to return 18 if 18 is passed through", function() {
+        expect(endJob(18)).toBe(18);
+    });
+
 }); //end test case for endJob function

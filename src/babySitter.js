@@ -11,6 +11,6 @@ function startJob(startTime) {
     }
 };
 
-function endJob() {
-    
+function endJob(endTime) {
+    return endTime;
 };
