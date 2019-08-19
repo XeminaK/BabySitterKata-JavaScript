@@ -101,4 +101,7 @@ describe("Tests for endCheckInteger function", function() {
 
 describe("Tests for familyA function", function() {
 
+    it("testing to see if familyA function is defined", function() {
+        expect(familyA).toBeDefined();
+    });
 });

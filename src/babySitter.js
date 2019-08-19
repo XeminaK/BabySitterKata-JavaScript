@@ -43,3 +43,7 @@ function endCheckInteger(endTime) {
       return endTime;  
     };
 };
+
+function familyA() {
+    
+};
