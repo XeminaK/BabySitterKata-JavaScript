@@ -8,13 +8,16 @@ function startJob(startTime) {
         return startTime + 24;
     } else {
         return 17;
+        //return "The hours are out of range" -> if message is required
     }
 };
 
 function endJob(endTime) {
-    //endTime between 6pm and midnight (cannot be 5pm since that is the earliest start time)
+    //endTime between 6pm and midnight (cannot be 5pm since that is the earliest start)
     if (endTime >=18 && endTime <=24){
         return endTime;
+    } else {
+    //4am -> 4 hours after midnight (24) -> 24 + 4 = 28
+    return 28;
     }
-    return endTime;
 };
