@@ -42,6 +42,10 @@ function endCheckInteger(endTime) {
     };
 };
 
+function totalHours() {
+    
+};
+
 function familyA(startTime, endTime) {
     
 };
