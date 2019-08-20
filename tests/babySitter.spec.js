@@ -99,16 +99,16 @@ describe("Tests for endCheckInteger function", function() {
     });
 });
 
+describe("Tests for totalHours function", function() {
+    it("Testing to see if totalHours function is defined", function() {
+        expect(totalHours).toBeDefined();
+    });
+});
+
 describe("Tests for familyA function", function() {
 
     it("Testing to see if familyA function is defined", function() {
         expect(familyA).toBeDefined();
     });
 
-    it("Testing to see if familyA will pass startTime and endTime and return hours worked", function() {
-        expect(familyA(17, 24)).toBe(7);
-       // familyA(17, 24);
-       // let hours = 7;
-        //expect(hours).toBe(7);
-    });
 });
