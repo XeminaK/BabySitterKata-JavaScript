@@ -56,6 +56,10 @@ function familyA(startTime, endTime) {
     let value = 0;
     let hour = 0;
     let totalHours = totalHoursCalculated(startTime, endTime);
+    if (isNaN(totalHours)) {
+        console.log("The end time is smaller than the start time, please try again!");
+        return;
+    }
     
     while (hour < totalHours) {
         //before 11pm rate
@@ -75,6 +79,10 @@ function familyB(startTime, endTime) {
     let value = 0;
     let hour = 0;
     let totalHours = totalHoursCalculated(startTime, endTime);
+    if (isNaN(totalHours)) {
+        console.log("The end time is smaller than the start time, please try again!");
+        return;
+    }
 
     while (hour < totalHours) {
         //before 10pm rate
@@ -98,6 +106,10 @@ function familyC(startTime, endTime) {
     let value = 0;
     let hour = 0;
     let totalHours = totalHoursCalculated(startTime, endTime);
+    if (isNaN(totalHours)) {
+        console.log("The end time is smaller than the start time, please try again!");
+        return;
+    }
 
     while (hour < totalHours) {
         //before 9pm rate

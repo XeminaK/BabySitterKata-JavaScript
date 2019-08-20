@@ -17,7 +17,7 @@ describe("Tests for startJob function", function() {
         expect(startJob(20)).toBe(20);
     });
     //startTime can start no earlier than 5pm (17:00)
-    it("Testing to see if startJob will take a time that is not in range and return a time in range", function() {
+    it("Testing to see if startJob will take a time that is not in range and return an error message", function() {
         expect(startJob(5)).toBe("The hours are out of range");
     });
 
@@ -48,7 +48,7 @@ describe("Tests for endJob function", function() {
         expect(endJob(21)).toBe(21);
     });
     
-    it("Testing to see if endJob will take a time that is not in range and return a time in range", function() {
+    it("Testing to see if endJob will take a time that is not in range and return an error message", function() {
         expect(endJob(10)).toBe("The hours are out of range");
     });
     //To have the code not break after midnight, I chose to add +24 to the numbers that start after midnight
@@ -231,18 +231,27 @@ describe("Tests for sitterRates function", function() {
         expect(sitterRates(19.5, 1.5, "C")).toBe(117);
     });
 
-    it("Test to see if startTime is out of range, sitterRates will console.log a message and stop the function", function() {
+    it("Test to see if startTime is out of range, sitterRates will console.log an error message and stop the function", function() {
         const logSpy = spyOn(console, "log");
         sitterRates(7, 24, "A");
         expect(logSpy).toHaveBeenCalledWith("The startTime number is out of range, try again!");
     });
 
-    it("Test to see if endTime is out of range, sitterRates will console.log a message and stop the function", function() {
+    it("Test to see if endTime is out of range, sitterRates will console.log an error message and stop the function", function() {
         const logSpy = spyOn(console, "log");
         sitterRates(24, 7, "A");
         expect(logSpy).toHaveBeenCalledWith("The endTime number is out of range, try again!");
     });
 
+    it("Test to see if endTime is smaller than startTime, sitterRates will console.log an error message and stop the function", function() {
+        const logSpy = spyOn(console, "log");
+        sitterRates(24, 18, "A");
+        sitterRates(24, 18, "B");
+        sitterRates(24, 18, "C");
+        expect(logSpy).toHaveBeenCalledWith("The end time is smaller than the start time, please try again!");
+        expect(logSpy).toHaveBeenCalledTimes(3);
+    });
+
     
 
-}); //end test case for sitterRates function (6 cases/ total 41);
+}); //end test case for sitterRates function (11 cases/ total 46);
