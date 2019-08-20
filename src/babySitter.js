@@ -75,11 +75,17 @@ function familyB(startTime, endTime) {
     let totalHours = totalHoursCalculated(startTime, endTime);
 
     while (hour < totalHours) {
+        //before 10pm rate
         if (startTime < 22) {
             startTime++;
             value = value + 12;
-        } else {
+        //between 10pm and midnight rate
+        } else if (startTime >= 22 && startTime < 24) {
+            startTime++;
             value = value + 8;
+        //after midnight rate
+        } else if (startTime >= 24) {
+            value = value + 16;
         };
         hour++;
     }

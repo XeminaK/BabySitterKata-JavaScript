@@ -151,5 +151,10 @@ describe("Tests for familyB function", function() {
         expect(familyB(22, 24)).toBe(16);
         expect(familyB(22, 23)).toBe(8);
     });
+    //After 24 (midnight)
+    it("Testing startTime and endTime after midnight equals a value of 16 dollars an hour", function() {
+        expect(familyB(24, 27)).toBe(48);
+        expect(familyB(24, 28)).toBe(64);
+    });
 
 }); //end test case for familyB function
