@@ -51,5 +51,6 @@ function totalHours(startTime, endTime) {
 };
 
 function familyA(startTime, endTime) {
-    
+    let total = totalHours(startTime, endTime);
+    return (15 * total);
 };
