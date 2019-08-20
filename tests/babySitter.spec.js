@@ -222,6 +222,9 @@ describe("Tests for sitterRates function", function() {
     it("Testing if times after midnight pass through sitterRates function, are converted with +24, and return an accurate value", function() {
         expect(sitterRates(23, 1, "C")).toBe(30); //11pm - 1am 
         expect(sitterRates(1, 3, "A")).toBe(40);
-    })
+        expect(sitterRates(22, 2, "B")).toBe(48); //10pm - 4am
+    });
+
+    
 
 }); //end test case for sitterRates function (6 cases/ total 41);
