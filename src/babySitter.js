@@ -42,7 +42,7 @@ function endCheckInteger(endTime) {
     };
 };
 
-function totalHours(startTime, endTime) {
+function totalHoursCalculated(startTime, endTime) {
     if (endTime < startTime) {
         return "End time is smaller than start time";
     } else {
@@ -51,6 +51,6 @@ function totalHours(startTime, endTime) {
 };
 
 function familyA(startTime, endTime) {
-    let total = totalHours(startTime, endTime);
-    return (15 * total);
+    let totalHours = totalHoursCalculated(startTime, endTime);
+    return (15 * totalHours);
 };

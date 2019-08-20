@@ -97,22 +97,22 @@ describe("Tests for endCheckInteger function", function() {
 
 }); //end test case for endCheckInteger function
 
-describe("Tests for totalHours function", function() {
+describe("Tests for totalHoursCalculated function", function() {
     it("Testing to see if totalHours is defined", function() {
-        expect(totalHours).toBeDefined();
+        expect(totalHoursCalculated).toBeDefined();
     });
     //22 -> 10pm , 25 -> 1am (24 + 1 conversion was created earlier)
-    it("Testing to see if totalHours returns the total hours between start time and end time", function() {
-        expect(totalHours(17, 19)).toBe(2);
-        expect(totalHours(22, 25)).toBe(3);
+    it("Testing to see if totalHoursCalculated returns the total hours between start time and end time", function() {
+        expect(totalHoursCalculated(17, 19)).toBe(2);
+        expect(totalHoursCalculated(22, 25)).toBe(3);
     });
 
     it("Testing to see if an error message returs if endTime is smaller than startTime", function() {
-        expect(totalHours(19, 17)).toBe("End time is smaller than start time");
-        expect(totalHours(25, 22)).toBe("End time is smaller than start time");
+        expect(totalHoursCalculated(19, 17)).toBe("End time is smaller than start time");
+        expect(totalHoursCalculated(25, 22)).toBe("End time is smaller than start time");
     });
 
-}); //end test case for totalHours function
+}); //end test case for totalHoursCalculated function
 
 describe("Tests for familyA function", function() {
 
