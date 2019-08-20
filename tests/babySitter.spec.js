@@ -138,7 +138,7 @@ describe("Tests for familyA function", function() {
 }); //end test case for familyA function
 
 describe("Tests for familyB function", function() {
-    it("Testing to see if familyB function is define", function() {
+    it("Testing to see if familyB function is defined", function() {
         expect(familyB).toBeDefined();
     });
     //10pm -> 22:00
@@ -160,6 +160,13 @@ describe("Tests for familyB function", function() {
     it("Testing varying wage rates for all 3 wages", function() {
         expect(familyB(20,28)).toBe(104);
         expect(familyB(22,28)).toBe(80);
-    })
+    });
 
 }); //end test case for familyB function
+
+describe("Tests for familyC function", function() {
+    it("Testing to see if familyC function is defined", function() {
+        expect(familyC).toBeDefined();
+    });
+
+}); //end test case for familyC function

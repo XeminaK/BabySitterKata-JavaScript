@@ -86,8 +86,12 @@ function familyB(startTime, endTime) {
         //after midnight rate
         } else if (startTime >= 24) {
             value = value + 16;
-        };
+        }; //end if else statement
         hour++;
-    }
+    }; //end while loop
     return value;
+};
+
+function familyC() {
+
 };
