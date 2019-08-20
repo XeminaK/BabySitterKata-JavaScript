@@ -186,3 +186,10 @@ describe("Tests for familyC function", function() {
     });
 
 }); //end test case for familyC function
+
+describe("Tests for sitterRates function", function() {
+    it("Testing to see if sitterRates function is defined", function() {
+        expect(sitterRates).toBeDefined();
+    });
+
+}); //end test case for sitterRates function

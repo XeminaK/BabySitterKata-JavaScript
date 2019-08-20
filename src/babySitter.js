@@ -109,5 +109,8 @@ function familyC(startTime, endTime) {
         hour++;
     };
     return value;
+};
 
+function sitterRates() {
+    
 };
