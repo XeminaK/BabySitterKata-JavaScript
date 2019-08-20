@@ -111,7 +111,8 @@ describe("Tests for totalHours function", function() {
         expect(totalHours(19, 17)).toBe("End time is smaller than start time");
         expect(totalHours(25, 22)).toBe("End time is smaller than start time");
     });
-});
+
+}); //end test case for totalHours function
 
 describe("Tests for familyA function", function() {
 
