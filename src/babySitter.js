@@ -7,7 +7,6 @@ function startJob(startTime) {
     } else if (startTime >= 1 && startTime <=3) {
         return startTime + 24;
     } else {
-        //return 17;
         return "The hours are out of range";
     }
 };
@@ -21,7 +20,6 @@ function endJob(endTime) {
         return endTime + 24;
     } else {
     //4am -> 4 hours after midnight (24) -> 24 + 4 = 28
-    //return 28;
     return "The hours are out of range";
     }
 };

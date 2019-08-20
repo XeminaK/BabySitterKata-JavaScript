@@ -18,8 +18,6 @@ describe("Tests for startJob function", function() {
     });
     //startTime can start no earlier than 5pm (17:00)
     it("Testing to see if startJob will take a time that is not in range and return a time in range", function() {
-        //expect(startJob(16)).toBe(17);
-        //expect(startJob(5)).toBe(17);
         expect(startJob(5)).toBe("The hours are out of range");
     });
 
@@ -51,7 +49,6 @@ describe("Tests for endJob function", function() {
     });
     //Entering 10am will return default end time -> 4am (24 + 4 = 28)
     it("Testing to see if endJob will take a time that is not in range and return a time in range", function() {
-        //expect(endJob(10)).toBe(28);
         expect(endJob(10)).toBe("The hours are out of range");
     });
     //To have the code not break after midnight, I chose to add +24 to the numbers that start after midnight
@@ -80,7 +77,7 @@ describe("Tests for startCheckInteger function", function() {
         expect(startCheckInteger(13.7)).toBe(13);
     });
 
-});
+}); //end test case for StartCheckInteger function
 
 describe("Tests for endCheckInteger function", function() {
 
@@ -97,7 +94,8 @@ describe("Tests for endCheckInteger function", function() {
         expect(endCheckInteger(17.5)).toBe(18);
         expect(endCheckInteger(13.3)).toBe(14);
     });
-});
+
+}); //end test case for endCheckInteger function
 
 describe("Tests for familyA function", function() {
 
@@ -105,4 +103,4 @@ describe("Tests for familyA function", function() {
         expect(familyA).toBeDefined();
     });
 
-});
+}); //end test case for familyA function
