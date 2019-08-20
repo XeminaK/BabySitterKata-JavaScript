@@ -168,5 +168,10 @@ describe("Tests for familyC function", function() {
     it("Testing to see if familyC function is defined", function() {
         expect(familyC).toBeDefined();
     });
+    //9pm -> 21:00
+    it("Testing startTime and endTime before 9pm to be a value of 21 dollars an hour", function() {
+        expect(familyC(18, 19)).toBe(21);
+        expect(familyC(18, 20)).toBe(42);
+    });
 
 }); //end test case for familyC function

@@ -92,6 +92,19 @@ function familyB(startTime, endTime) {
     return value;
 };
 
-function familyC() {
+function familyC(startTime, endTime) {
+    let value = 0;
+    let hour = 0;
+    let totalHours = totalHoursCalculated(startTime, endTime);
+
+    while (hour < totalHours) {
+        //before 9pm rate
+        if (startTime < 21) {
+            startTime++
+            value = value + 21;
+        };
+        hour++;
+    };
+    return value;
 
 };
