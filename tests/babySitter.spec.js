@@ -100,7 +100,12 @@ describe("Tests for endCheckInteger function", function() {
 describe("Tests for totalHours function", function() {
     it("Testing to see if totalHours is defined", function() {
         expect(totalHours).toBeDefined();
-    })
+    });
+    //22 -> 10pm , 25 -> 1am (24 + 1 conversion was created earlier)
+    it("Testing to see if totalHours returns the total hours between start time and end time", function() {
+        expect(totalHours(17, 19)).toBe(2);
+        expect(totalHours(22, 25)).toBe(3);
+    });
 });
 
 describe("Tests for familyA function", function() {

@@ -42,7 +42,8 @@ function endCheckInteger(endTime) {
     };
 };
 
-function totalHours() {
+function totalHours(startTime, endTime) {
+    return endTime - startTime;
     
 };
 
