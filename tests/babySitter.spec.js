@@ -207,4 +207,9 @@ describe("Tests for sitterRates function", function() {
         expect(sitterRates(20, 24, 'c')).toBe(66);
     });
 
+    it("Testing if A, B, or C are not passed through, an error message will return", function() {
+        expect(sitterRates(20, 24, "d")).toBe("Not a selectable family, try again!");
+        expect(sitterRates(20, 24, 20)).toBe("Not a selectable family, try again!");
+    })
+
 }); //end test case for sitterRates function
