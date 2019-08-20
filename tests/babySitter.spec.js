@@ -192,4 +192,9 @@ describe("Tests for sitterRates function", function() {
         expect(sitterRates).toBeDefined();
     });
 
+    it("Test to see if 'A' is passed through for family, sitterRates will calculate value based on familyA wages", function() {
+        expect(sitterRates(22, 24, "A")).toBe(35);
+        expect(sitterRates(20, 24, 'a')).toBe(65);
+    })
+
 }); //end test case for sitterRates function

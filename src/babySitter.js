@@ -111,6 +111,10 @@ function familyC(startTime, endTime) {
     return value;
 };
 
-function sitterRates() {
-    
+function sitterRates(startTime, endTime, family) {
+    let value = 0;
+    if (family == "A" || family == "a") {
+        value = familyA(startTime, endTime);
+    }
+    return value;
 };
