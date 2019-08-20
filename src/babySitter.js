@@ -43,8 +43,11 @@ function endCheckInteger(endTime) {
 };
 
 function totalHours(startTime, endTime) {
+    if (endTime < startTime) {
+        return "End time is smaller than start time";
+    } else {
     return endTime - startTime;
-    
+    };
 };
 
 function familyA(startTime, endTime) {
