@@ -75,7 +75,12 @@ function familyB(startTime, endTime) {
     let totalHours = totalHoursCalculated(startTime, endTime);
 
     while (hour < totalHours) {
-        value = value + 12;
+        if (startTime < 22) {
+            startTime++;
+            value = value + 12;
+        } else {
+            value = value + 8;
+        };
         hour++;
     }
     return value;
