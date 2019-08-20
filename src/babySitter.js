@@ -63,11 +63,12 @@ function familyA(startTime, endTime) {
         //after 11pm rate
         } else {
             value = value + 20
-            
         }; //end if else statment
-
         hour++;
     }; //end while loop
-
     return value;
+};
+
+function familyB() {
+
 };

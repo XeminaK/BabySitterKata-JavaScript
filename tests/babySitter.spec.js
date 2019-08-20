@@ -136,3 +136,10 @@ describe("Tests for familyA function", function() {
     });
 
 }); //end test case for familyA function
+
+describe("Tests for familyB function", function() {
+    it("Testing to see if familyB function is define", function() {
+        expect(familyB).toBeDefined();
+    });
+
+}); //end test case for familyB function
