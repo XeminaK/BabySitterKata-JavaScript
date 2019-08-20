@@ -141,5 +141,10 @@ describe("Tests for familyB function", function() {
     it("Testing to see if familyB function is define", function() {
         expect(familyB).toBeDefined();
     });
+    //10pm -> 22:00
+    it("Testing startTime and endTime before 10pm equals a value of 12 dollars an hours", function() {
+        expect(familyB(20, 22)).toBe(24);
+        expect(familyB(18, 22)).toBe(48);
+    });
 
 }); //end test case for familyB function

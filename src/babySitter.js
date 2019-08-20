@@ -69,6 +69,14 @@ function familyA(startTime, endTime) {
     return value;
 };
 
-function familyB() {
+function familyB(startTime, endTime) {
+    let value = 0;
+    let hour = 0;
+    let totalHours = totalHoursCalculated(startTime, endTime);
 
+    while (hour < totalHours) {
+        value = value + 12;
+        hour++;
+    }
+    return value;
 };
