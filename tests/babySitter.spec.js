@@ -157,4 +157,9 @@ describe("Tests for familyB function", function() {
         expect(familyB(24, 28)).toBe(64);
     });
 
+    it("Testing varying wage rates for all 3 wages", function() {
+        expect(familyB(20,28)).toBe(104);
+        expect(familyB(22,28)).toBe(80);
+    })
+
 }); //end test case for familyB function
