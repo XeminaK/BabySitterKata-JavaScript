@@ -119,6 +119,8 @@ function sitterRates(startTime, endTime, family) {
         value = familyA(startTime, endTime);
     } else if (family == "B" || family == "b") {
         value = familyB(startTime, endTime);
+    } else if (family == "C" || family == "c") {
+        value = familyC(startTime, endTime);
     };
     return value;
 };
