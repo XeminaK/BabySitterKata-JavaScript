@@ -229,6 +229,12 @@ describe("Tests for sitterRates function", function() {
         expect(sitterRates(22.5, 24, "A")).toBe(35);
         expect(sitterRates(17, 19.5, "B")).toBe(36);
         expect(sitterRates(19.5, 1.5, "C")).toBe(117);
+    });
+
+    it("Test to see if startTime is out of range, sitterRates will console.log a message and stop the function", function() {
+        const logSpy = spyOn(console, "log");
+        sitterRates(7, 24, "A");
+        expect(logSpy).toHaveBeenCalledWith("The startTime number is out of range, try again!");
     })
 
     

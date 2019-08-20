@@ -116,6 +116,10 @@ function familyC(startTime, endTime) {
 function sitterRates(startTime, endTime, family) {
     let value = 0;
     startTime = startJob(startTime);
+    if (isNaN(startTime)) {
+        console.log("The startTime number is out of range, try again!");
+        return;
+    };
     startTime = startCheckInteger(startTime);
     endTime = endJob(endTime);
     endTime = endCheckInteger(endTime);
