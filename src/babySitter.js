@@ -21,8 +21,8 @@ function endJob(endTime) {
         return endTime + 24;
     } else {
     //4am -> 4 hours after midnight (24) -> 24 + 4 = 28
-    return 28;
-    //return "The hours are out of range" -> if message is required
+    //return 28;
+    return "The hours are out of range";
     }
 };
 
