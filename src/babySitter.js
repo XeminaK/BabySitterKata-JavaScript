@@ -122,6 +122,7 @@ function sitterRates(startTime, endTime, family) {
     } else if (family == "C" || family == "c") {
         value = familyC(startTime, endTime);
     } else {
+        console.log("Not a selectable family, try again!");
         return "Not a selectable family, try again!";
     }
     return value;

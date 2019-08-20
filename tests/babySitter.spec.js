@@ -27,7 +27,7 @@ describe("Tests for startJob function", function() {
         expect(startJob(2)).toBe(26);
     });
 
-}); //end test case for startJob function
+}); //end test case for startJob function (6 cases)
 
 describe("Tests for endJob function", function() {
     
@@ -57,7 +57,7 @@ describe("Tests for endJob function", function() {
         expect(endJob(2)).toBe(26);
     });
 
-}); //end test case for endJob function
+}); //end test case for endJob function (6 cases/ total 12)
 
 describe("Tests for startCheckInteger function", function() {
     it("Testing to see if 'startCheckInteger' is defined", function() {
@@ -77,7 +77,7 @@ describe("Tests for startCheckInteger function", function() {
         expect(startCheckInteger(13.7)).toBe(13);
     });
 
-}); //end test case for StartCheckInteger function
+}); //end test case for StartCheckInteger function (4 cases/ total 16)
 
 describe("Tests for endCheckInteger function", function() {
 
@@ -95,7 +95,7 @@ describe("Tests for endCheckInteger function", function() {
         expect(endCheckInteger(13.3)).toBe(14);
     });
 
-}); //end test case for endCheckInteger function
+}); //end test case for endCheckInteger function (3 cases/ total 19)
 
 describe("Tests for totalHoursCalculated function", function() {
     it("Testing to see if totalHours is defined", function() {
@@ -112,7 +112,7 @@ describe("Tests for totalHoursCalculated function", function() {
         expect(totalHoursCalculated(25, 22)).toBe("End time is smaller than start time");
     });
 
-}); //end test case for totalHoursCalculated function
+}); //end test case for totalHoursCalculated function (3 cases/ total 22)
 
 describe("Tests for familyA function", function() {
 
@@ -135,7 +135,7 @@ describe("Tests for familyA function", function() {
         expect(familyA(20, 24)).toBe(65);
     });
 
-}); //end test case for familyA function
+}); //end test case for familyA function (4 cases/ total 26)
 
 describe("Tests for familyB function", function() {
     it("Testing to see if familyB function is defined", function() {
@@ -162,7 +162,7 @@ describe("Tests for familyB function", function() {
         expect(familyB(22,28)).toBe(80);
     });
 
-}); //end test case for familyB function
+}); //end test case for familyB function (5 cases/ total 31)
 
 describe("Tests for familyC function", function() {
     it("Testing to see if familyC function is defined", function() {
@@ -185,9 +185,10 @@ describe("Tests for familyC function", function() {
         expect(familyC(17, 24)).toBe(129);
     });
 
-}); //end test case for familyC function
+}); //end test case for familyC function (4 cases/ total 35)
 
 describe("Tests for sitterRates function", function() {
+
     it("Testing to see if sitterRates function is defined", function() {
         expect(sitterRates).toBeDefined();
     });
@@ -207,9 +208,15 @@ describe("Tests for sitterRates function", function() {
         expect(sitterRates(20, 24, 'c')).toBe(66);
     });
 
-    it("Testing if A, B, or C are not passed through, an error message will return", function() {
+    it("Testing if A, B, or C are not passed through for family parameter, an error message will return", function() {
         expect(sitterRates(20, 24, "d")).toBe("Not a selectable family, try again!");
         expect(sitterRates(20, 24, 20)).toBe("Not a selectable family, try again!");
-    })
+    });
+    
+    it("Testing if console.log message printed when A, B, or C was not passed through for family parameter", function() {
+        const logSpy = spyOn(console, "log");
+        sitterRates(20, 24, "d");
+        expect(logSpy).toHaveBeenCalledWith("Not a selectable family, try again!");
+    });
 
-}); //end test case for sitterRates function
+}); //end test case for sitterRates function (6 cases/ total 41);
