@@ -235,7 +235,13 @@ describe("Tests for sitterRates function", function() {
         const logSpy = spyOn(console, "log");
         sitterRates(7, 24, "A");
         expect(logSpy).toHaveBeenCalledWith("The startTime number is out of range, try again!");
-    })
+    });
+
+    it("Test to see if endTime is out of range, sitterRates will console.log a message and stop the function", function() {
+        const logSpy = spyOn(console, "log");
+        sitterRates(24, 7, "A");
+        expect(logSpy).toHaveBeenCalledWith("The endTime number is out of range, try again!");
+    });
 
     
 
