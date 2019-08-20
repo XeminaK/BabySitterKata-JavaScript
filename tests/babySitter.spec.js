@@ -225,6 +225,12 @@ describe("Tests for sitterRates function", function() {
         expect(sitterRates(22, 2, "B")).toBe(48); //10pm - 4am
     });
 
+    it("Testing to see if a non-integer is passed, sitterRates will change the non-integer to an integer and return an accurate value", function() {
+        expect(sitterRates(22.5, 24, "A")).toBe(35);
+        expect(sitterRates(17, 19.5, "B")).toBe(36);
+        expect(sitterRates(19.5, 1.5, "C")).toBe(117);
+    })
+
     
 
 }); //end test case for sitterRates function (6 cases/ total 41);
