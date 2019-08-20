@@ -51,10 +51,23 @@ function totalHoursCalculated(startTime, endTime) {
 };
 
 function familyA(startTime, endTime) {
+    let value = 0;
+    let hour = 0;
     let totalHours = totalHoursCalculated(startTime, endTime);
-    if (startTime > 23) {
-        return (20 * totalHours);
-    } else {
-    return (15 * totalHours);
-    };
+    
+    while (hour < totalHours) {
+        //before 11pm rate
+        if (startTime < 23) {
+            startTime++
+            value = value + 15;
+        //after 11pm rate
+        } else {
+            value = value + 20
+            
+        }; //end if else statment
+
+        hour++;
+    }; //end while loop
+
+    return value;
 };

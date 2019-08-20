@@ -120,14 +120,19 @@ describe("Tests for familyA function", function() {
         expect(familyA).toBeDefined();
     });
     //17 (5pm) - 18 (6pm)
-    it("Testing startTime before 11pm equals a value 15 dollars an hour", function() {
+    it("Testing startTime and endTime before 11pm equals a value 15 dollars an hour", function() {
         expect(familyA(17, 18)).toBe(15);
         expect(familyA(17, 20)).toBe(45);
     });
     //11pm -> 23:00 , 26 -> 2am (24 + 2), 27 -> 3am (24 + 3)
-    it("Testing startTime after 11pm equals a value of 20 dollars an hour", function() {
+    it("Testing startTime and endTime after 11pm equals a value of 20 dollars an hour", function() {
         expect(familyA(24, 26)).toBe(40);
         expect(familyA(24, 27)).toBe(60);
+    });
+
+    it("Testing for varying wage rates that begin before 11pm and end after 11pm", function() {
+        expect(familyA(22, 24)).toBe(35);
+        expect(familyA(20, 24)).toBe(65);
     });
 
 }); //end test case for familyA function
