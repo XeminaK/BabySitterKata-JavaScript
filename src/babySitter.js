@@ -52,5 +52,9 @@ function totalHoursCalculated(startTime, endTime) {
 
 function familyA(startTime, endTime) {
     let totalHours = totalHoursCalculated(startTime, endTime);
+    if (startTime > 23) {
+        return (20 * totalHours);
+    } else {
     return (15 * totalHours);
+    };
 };
