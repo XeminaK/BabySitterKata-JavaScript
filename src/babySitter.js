@@ -28,6 +28,7 @@ function startCheckInteger(startTime) {
     if (Number.isInteger(startTime)) {
         return startTime;
     } else {
+    //round down startTime
     startTime = Math.floor(startTime);
     return startTime;
     };
@@ -37,6 +38,7 @@ function endCheckInteger(endTime) {
     if (Number.isInteger(endTime)) {
         return endTime;
     } else {
+    //round up endTime
       endTime = Math.ceil(endTime);
       return endTime;  
     };
@@ -59,10 +61,10 @@ function familyA(startTime, endTime) {
         //before 11pm rate
         if (startTime < 23) {
             startTime++
-            value = value + 15;
+            value += 15;
         //after 11pm rate
         } else {
-            value = value + 20
+            value += 20
         }; //end if else statment
         hour++;
     }; //end while loop
@@ -78,14 +80,14 @@ function familyB(startTime, endTime) {
         //before 10pm rate
         if (startTime < 22) {
             startTime++;
-            value = value + 12;
+            value += 12;
         //between 10pm and midnight rate
         } else if (startTime >= 22 && startTime < 24) {
             startTime++;
-            value = value + 8;
+            value += 8;
         //after midnight rate
         } else if (startTime >= 24) {
-            value = value + 16;
+            value += 16;
         }; //end if else statement
         hour++;
     }; //end while loop
@@ -101,10 +103,10 @@ function familyC(startTime, endTime) {
         //before 9pm rate
         if (startTime < 21) {
             startTime++
-            value = value + 21;
+            value += 21;
         //after 9pm rate
         } else {
-            value = value + 15;
+            value += 15;
         };
         hour++;
     };
