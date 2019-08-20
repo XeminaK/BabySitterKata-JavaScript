@@ -115,6 +115,8 @@ function familyC(startTime, endTime) {
 
 function sitterRates(startTime, endTime, family) {
     let value = 0;
+    startTime = startJob(startTime);
+    endTime = endJob(endTime);
     if (family == "A" || family == "a") {
         value = familyA(startTime, endTime);
     } else if (family == "B" || family == "b") {
