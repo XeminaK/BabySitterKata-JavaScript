@@ -7,8 +7,8 @@ function startJob(startTime) {
     } else if (startTime >= 1 && startTime <=3) {
         return startTime + 24;
     } else {
-        return 17;
-        //return "The hours are out of range" -> if message is required
+        //return 17;
+        return "The hours are out of range";
     }
 };
 

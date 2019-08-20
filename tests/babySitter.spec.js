@@ -18,10 +18,10 @@ describe("Tests for startJob function", function() {
     });
     //startTime can start no earlier than 5pm (17:00)
     it("Testing to see if startJob will take a time that is not in range and return a time in range", function() {
-        expect(startJob(16)).toBe(17);
-        expect(startJob(5)).toBe(17);
-        //expect(startJob(5)).toBe("The hours are out of range"); -> if message is required
-    })
+        //expect(startJob(16)).toBe(17);
+        //expect(startJob(5)).toBe(17);
+        expect(startJob(5)).toBe("The hours are out of range");
+    });
 
     //To have the code not break after midnight, I chose to add +24 to the numbers that start after midnight
     it("Testing to see startJob will take a time in range (after midnight) and return the appropriate number (startTime +24)", function() {
