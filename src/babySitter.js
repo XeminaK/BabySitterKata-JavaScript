@@ -8,7 +8,7 @@ function startJob(startTime) {
         return startTime + 24;
     } else {
         return "The hours are out of range";
-    }
+    };
 };
 
 function endJob(endTime) {
@@ -21,7 +21,7 @@ function endJob(endTime) {
     } else {
     //4am -> 4 hours after midnight (24) -> 24 + 4 = 28
     return "The hours are out of range";
-    }
+    };
 };
 
 function startCheckInteger(startTime) {
@@ -59,8 +59,7 @@ function familyA(startTime, endTime) {
     if (isNaN(totalHours)) {
         console.log("The end time is smaller than the start time, please try again!");
         return;
-    }
-    
+    };
     while (hour < totalHours) {
         //before 11pm rate
         if (startTime < 23) {
@@ -82,8 +81,7 @@ function familyB(startTime, endTime) {
     if (isNaN(totalHours)) {
         console.log("The end time is smaller than the start time, please try again!");
         return;
-    }
-
+    };
     while (hour < totalHours) {
         //before 10pm rate
         if (startTime < 22) {
@@ -109,8 +107,7 @@ function familyC(startTime, endTime) {
     if (isNaN(totalHours)) {
         console.log("The end time is smaller than the start time, please try again!");
         return;
-    }
-
+    };
     while (hour < totalHours) {
         //before 9pm rate
         if (startTime < 21) {
@@ -137,7 +134,7 @@ function sitterRates(startTime, endTime, family) {
     if (isNaN(endTime)) {
         console.log("The endTime number is out of range, try again!");
         return;
-    }
+    };
     endTime = endCheckInteger(endTime);
     if (family == "A" || family == "a") {
         value = familyA(startTime, endTime);
@@ -148,6 +145,6 @@ function sitterRates(startTime, endTime, family) {
     } else {
         console.log("Not a selectable family, try again!");
         return "Not a selectable family, try again!";
-    }
+    };
     return value;
 };
