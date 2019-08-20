@@ -173,5 +173,10 @@ describe("Tests for familyC function", function() {
         expect(familyC(18, 19)).toBe(21);
         expect(familyC(18, 20)).toBe(42);
     });
+    //After 22 (9pm) rate;
+    it("Testing startTime and endTime after 9pm equals a value of 15 dollars an hour", function() {
+        expect(familyC(22, 24)).toBe(30);
+        expect(familyC(25, 26)).toBe(15);
+    });
 
 }); //end test case for familyC function

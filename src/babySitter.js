@@ -102,6 +102,9 @@ function familyC(startTime, endTime) {
         if (startTime < 21) {
             startTime++
             value = value + 21;
+        //after 9pm rate
+        } else {
+            value = value + 15;
         };
         hour++;
     };
