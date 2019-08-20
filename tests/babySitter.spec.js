@@ -179,4 +179,10 @@ describe("Tests for familyC function", function() {
         expect(familyC(25, 26)).toBe(15);
     });
 
+    it("Testing for varying wage rates that begin before 9pm and end after 9pm", function() {
+        expect(familyC(17, 21)).toBe(84);
+        expect(familyC(22, 24)).toBe(30);
+        expect(familyC(17, 24)).toBe(129);
+    });
+
 }); //end test case for familyC function
